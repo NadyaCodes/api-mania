@@ -17,6 +17,9 @@ const satellitePic = satellitePicResponse.data;
 const xkcdResponse = await axios.get("https://xkcd.com/info.0.json");
 const xkcd = xkcdResponse.data;
 
+const randomFoxResponse = await axios.get("https://randomfox.ca/floof/");
+const randomFox = randomFoxResponse.data;
+
 const router = (app) => {
 
   app.get("/", (request, response) => {
@@ -41,8 +44,12 @@ const router = (app) => {
     response.send(satellitePic)
   })
 
-  app.get(`/xkcd`, (request, response) => {
+  app.get("/xkcd", (request, response) => {
     response.send(xkcd)
+  })
+
+  app.get("/fox", (request, response) => {
+    response.send(randomFox)
   })
   
 };
