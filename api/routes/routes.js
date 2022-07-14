@@ -14,6 +14,9 @@ const catFacts = catFactsResponse.data;
 const satellitePicResponse = await axios.get("https://api.nasa.gov/planetary/apod?api_key=34vrP3yewNAFBUbwWjaIFkOc8R7IKAzCtPMo28Vx")
 const satellitePic = satellitePicResponse.data;
 
+const xkcdResponse = await axios.get("https://xkcd.com/info.0.json");
+const xkcd = xkcdResponse.data;
+
 const router = (app) => {
 
   app.get("/", (request, response) => {
@@ -36,6 +39,10 @@ const router = (app) => {
 
   app.get("/satellite-pic", (request, response) => {
     response.send(satellitePic)
+  })
+
+  app.get(`/xkcd`, (request, response) => {
+    response.send(xkcd)
   })
   
 };
