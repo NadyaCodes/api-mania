@@ -1,4 +1,4 @@
-import { request } from "express"
+import { request, response } from "express"
 import fs from 'fs'
 import axios from "axios"
 
@@ -15,8 +15,15 @@ await fs.readFile("data/products.json", 'utf-8', function(err, data) {
   products = JSON.parse(data)
 })
 
-const catFactsResponse = await axios.get("https://cat-fact.herokuapp.com/facts")
-const catFacts = catFactsResponse.data;
+let animals = ''
+await fs.readFile("data/animals.json", "utf-8", function(err, data) {
+  if (err) throw err;
+  animals = JSON.parse(data)
+})
+
+
+// const catFactsResponse = await axios.get("https://cat-fact.herokuapp.com/facts")
+// const catFacts = catFactsResponse.data;
 
 const satellitePicResponse = await axios.get("https://api.nasa.gov/planetary/apod?api_key=34vrP3yewNAFBUbwWjaIFkOc8R7IKAzCtPMo28Vx")
 const satellitePic = satellitePicResponse.data;
@@ -47,9 +54,13 @@ const router = (app) => {
     response.send(products)
   })
 
-  app.get("/cat-facts", (request, response) => {
-    response.send(catFacts)
+  app.get("/animals", (request, response) => {
+    response.send(animals)
   })
+
+  // app.get("/cat-facts", (request, response) => {
+  //   response.send(catFacts)
+  // })
 
   app.get("/satellite-pic", (request, response) => {
     response.send(satellitePic)
