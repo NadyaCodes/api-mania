@@ -8,6 +8,13 @@ const users = JSON.parse(userData)
 const quoteData = fs.readFileSync("data/quotes.json", 'utf-8')
 const quotes = JSON.parse(quoteData)
 
+let products = ''
+
+await fs.readFile("data/products.json", 'utf-8', function(err, data) {
+  if (err) throw err;
+  products = JSON.parse(data)
+})
+
 const catFactsResponse = await axios.get("https://cat-fact.herokuapp.com/facts")
 const catFacts = catFactsResponse.data;
 
@@ -35,6 +42,10 @@ const router = (app) => {
   app.get("/quotes", (request, response) => {
     response.send(quotes);
   });
+
+  app.get("/products", (request, response) => {
+    response.send(products)
+  })
 
   app.get("/cat-facts", (request, response) => {
     response.send(catFacts)
