@@ -1,5 +1,6 @@
 import logo from './face-emojji-1.png';
 import Navigation from './Navigation';
+import XKCD from './XKCD'
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Navigation />
       <main>
         <article>Hi</article>
+        <XKCD />
       </main>
     </div>
   );
