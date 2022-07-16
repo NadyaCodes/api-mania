@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
 
 export default function Navigation(props) {
   const {state, setState} = props
 
   const toggleElement = (element) => {
-    state.xkcd ? setState((prev) => ({...prev, [element]: false})) : setState((prev) => ({...prev, [element]: true}))
+    state[element] ? setState((prev) => ({...prev, [element]: false})) : setState((prev) => ({...prev, [element]: true}))
   }
 
   return(
@@ -14,7 +14,7 @@ export default function Navigation(props) {
       <button>Products</button>
       <button>Quotes</button>
       <button>Users</button>
-      <button>Animals</button>
+      <button onClick={() => toggleElement("animals")}>Animals</button>
       <button>Satellite Pic</button>
       <button onClick={() => toggleElement("xkcd")}>XKCD</button>
       <button>Fox</button>
