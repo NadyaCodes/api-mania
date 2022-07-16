@@ -13,9 +13,9 @@ export default function Navigation(props) {
       <button>Products</button>
       <button>Quotes</button>
       <button>Users</button>
-      <button onClick={() => toggleElement("animals")}>Animals</button>
+      <button onClick={() => toggleElement("animals")} className={state.animals ? 'selected' : null}>Animals</button>
       <button>Satellite Pic</button>
-      <button onClick={() => toggleElement("xkcd")}>XKCD</button>
+      <button onClick={() => toggleElement("xkcd")} className={state.xkcd ? 'selected' : null}>XKCD</button>
       <button>Fox</button>
     </nav>
   )
