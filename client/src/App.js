@@ -9,7 +9,7 @@ import { useState } from 'react'
 function App() {
   const [state, setState] = useState({
     xkcd: false,
-    animals: false
+    animals: false,
   })
   return (
     <div className="App">
@@ -19,7 +19,6 @@ function App() {
       </header>
         <Navigation state={state} setState={setState}/>
       <main>
-        <article>Hi</article>
         {state.xkcd && <XKCD />}
         {state.animals && <Animals />}
       </main>

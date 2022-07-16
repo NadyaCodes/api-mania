@@ -41,3 +41,31 @@
 .animalPic {
   width: 35vw;
 }
+
+.animal-details {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+.heading-container {
+  /* background-color: blue;
+  height: 150px; */
+  /* flex-direction: column; */
+  /* padding: 10px; */
+  display: flex;
+  /* width: 10%; */
+  /* align-items: center; */
+  justify-content: center;
+}
+
+h2 {
+
+  border: .2rem solid black;
+  padding: .5rem;
+}
+
+li {
+  list-style: none;
+  padding: .1rem 1.5rem;
+  max-width: 20rem;
+}
