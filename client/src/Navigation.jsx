@@ -10,7 +10,6 @@ export default function Navigation(props) {
 
   return(
     <nav>
-      <button>Animals</button>
       <button>Products</button>
       <button>Quotes</button>
       <button>Users</button>
