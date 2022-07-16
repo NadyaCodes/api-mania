@@ -69,3 +69,16 @@ li {
   padding: .1rem 1.5rem;
   max-width: 20rem;
 }
+
+button {
+  padding: .4rem;
+  margin: .2rem;
+  background-color: white;
+  border: .1rem solid black;
+  border-radius: 10%;
+}
+
+button:hover {
+  box-shadow: 0.15rem 0.15rem #878a91;
+  transform: translateX(-0.1rem) translateY(-0.1rem);
+}
