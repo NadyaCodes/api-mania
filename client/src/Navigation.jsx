@@ -1,4 +1,13 @@
-export default function Navigation() {
+import React, { useState } from 'react'
+
+
+export default function Navigation(props) {
+  const {state, setState} = props
+
+  const toggleElement = (element) => {
+    state.xkcd ? setState((prev) => ({...prev, [element]: false})) : setState((prev) => ({...prev, [element]: true}))
+  }
+
   return(
     <nav>
       <button>Animals</button>
@@ -7,7 +16,7 @@ export default function Navigation() {
       <button>Users</button>
       <button>Animals</button>
       <button>Satellite Pic</button>
-      <button>XKCD</button>
+      <button onClick={() => toggleElement("xkcd")}>XKCD</button>
       <button>Fox</button>
     </nav>
   )
