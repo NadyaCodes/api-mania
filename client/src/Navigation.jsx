@@ -13,10 +13,10 @@ export default function Navigation(props) {
       <button>Products</button>
       <button>Quotes</button>
       <button>Users</button>
-      <button onClick={() => toggleElement("animals")} className={state.animals ? 'selected' : null}>Animals</button>
-      <button>Satellite Pic</button>
       <button onClick={() => toggleElement("xkcd")} className={state.xkcd ? 'selected' : null}>XKCD</button>
       <button onClick={() => toggleElement("fox")} className={state.fox ? 'selected' : null}>Fox</button>
+      <button onClick={() => toggleElement("satellite")} className={state.satellite ? 'selected' : null}>Satellite Pic</button>
+      <button onClick={() => toggleElement("animals")} className={state.animals ? 'selected' : null}>Animals</button>
     </nav>
   )
 }

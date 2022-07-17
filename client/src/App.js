@@ -3,6 +3,7 @@ import Navigation from './Navigation';
 import XKCD from './XKCD'
 import Animals from './Animals'
 import Fox from './Fox'
+import Satellite from './Satellite';
 import './App.css';
 
 import { useState } from 'react'
@@ -11,7 +12,8 @@ function App() {
   const [state, setState] = useState({
     xkcd: false,
     animals: false,
-    fox: false
+    fox: false,
+    satellite: false
   })
   return (
     <div className="App">
@@ -23,6 +25,7 @@ function App() {
       <main>
         {state.xkcd && <XKCD />}
         {state.fox && <Fox />}
+        {state.satellite && <Satellite />}
         {state.animals && <Animals />}
         
       </main>
