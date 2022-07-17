@@ -48,13 +48,7 @@
   padding-bottom: 4rem;
 }
 .heading-container {
-  /* background-color: blue;
-  height: 150px; */
-  /* flex-direction: column; */
-  /* padding: 10px; */
   display: flex;
-  /* width: 10%; */
-  /* align-items: center; */
   justify-content: center;
 }
 
@@ -86,4 +80,9 @@ button:hover {
 button.selected {
   background-color: black;
   color: white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
 }
