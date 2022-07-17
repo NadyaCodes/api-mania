@@ -11,7 +11,7 @@ function App() {
   const [state, setState] = useState({
     xkcd: false,
     animals: false,
-    fox: true
+    fox: false
   })
   return (
     <div className="App">
