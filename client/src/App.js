@@ -2,6 +2,7 @@ import logo from './face-emojji-1.png';
 import Navigation from './Navigation';
 import XKCD from './XKCD'
 import Animals from './Animals'
+import Fox from './Fox'
 import './App.css';
 
 import { useState } from 'react'
@@ -10,6 +11,7 @@ function App() {
   const [state, setState] = useState({
     xkcd: false,
     animals: false,
+    fox: true
   })
   return (
     <div className="App">
@@ -21,6 +23,7 @@ function App() {
       <main>
         {state.xkcd && <XKCD />}
         {state.animals && <Animals />}
+        {state.fox && <Fox />}
       </main>
     </div>
   );
