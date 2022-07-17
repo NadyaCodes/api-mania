@@ -22,8 +22,9 @@ function App() {
         <Navigation state={state} setState={setState}/>
       <main>
         {state.xkcd && <XKCD />}
-        {state.animals && <Animals />}
         {state.fox && <Fox />}
+        {state.animals && <Animals />}
+        
       </main>
     </div>
   );
