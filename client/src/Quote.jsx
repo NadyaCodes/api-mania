@@ -24,7 +24,10 @@ export default function Quote() {
   
   return(
     <article>
-      {displayQuotes}
+      <h2>Wise Words from Wise People</h2>
+      <ul>
+        {displayQuotes}
+      </ul>
     </article>
   )
 }
