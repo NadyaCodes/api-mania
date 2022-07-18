@@ -39,7 +39,7 @@
 }
 
 .animalPic {
-  width: 35vw;
+  max-width: 30vw;
 }
 
 .animal-details {
@@ -61,6 +61,15 @@ li {
   list-style: none;
   padding: .1rem 1.5rem;
   max-width: 20rem;
+  margin-left: auto; 
+	margin-right: auto; 
+  /* display: inline-block; */
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0;
 }
 
 button {
@@ -93,4 +102,12 @@ article > img {
 
 article {
   margin: 1rem;
+}
+
+.catFact-container {
+  max-width: 25rem;
+}
+
+.animals-container {
+  max-width: 40rem;
 }

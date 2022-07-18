@@ -37,7 +37,7 @@ export default function Animals() {
 
   
   return(
-    <article>
+    <article className='animals-container'>
       {displayAnimals}
     </article>
   )
