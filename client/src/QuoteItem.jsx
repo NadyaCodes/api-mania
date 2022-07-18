@@ -4,7 +4,7 @@ export default function QuoteItem(props) {
       <li>
         {props.quote}
         <br/>
-        <em>{props.author}</em>
+        <em>~{props.author}</em>
         <hr />
       </li>
   )
