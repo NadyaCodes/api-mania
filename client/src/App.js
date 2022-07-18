@@ -4,6 +4,7 @@ import XKCD from './XKCD'
 import Animals from './Animals'
 import Fox from './Fox'
 import Satellite from './Satellite';
+import Quote from './Quote'
 import './App.css';
 
 import { useState } from 'react'
@@ -13,7 +14,8 @@ function App() {
     xkcd: false,
     animals: false,
     fox: false,
-    satellite: false
+    satellite: false,
+    quote: false
   })
   return (
     <div className="App">
@@ -23,6 +25,7 @@ function App() {
       </header>
         <Navigation state={state} setState={setState}/>
       <main>
+        {state.quote && <Quote />}
         {state.xkcd && <XKCD />}
         {state.fox && <Fox />}
         {state.satellite && <Satellite />}
