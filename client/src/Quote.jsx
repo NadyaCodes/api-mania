@@ -8,6 +8,7 @@ export default function Quote() {
   useEffect(() => {
     const fetchQuotes = async () => {
       axios.get('/quotes').then((data) => {
+        console.log(data.data)
         setQuotes(data.data)
       })
     }
@@ -16,7 +17,7 @@ export default function Quote() {
 
   const displayQuotes = quotes.map((quote, index) => {
     return(
-      <QuoteItem />
+      <QuoteItem author={quote.author} quote={quote.quote} key={index}/>
     )
   })
   

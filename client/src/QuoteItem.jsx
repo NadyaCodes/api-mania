@@ -1,7 +1,9 @@
 export default function QuoteItem(props) {
+  
   return(
-    <section>
-      Quote
-    </section>
+      <li>
+        {props.quote}
+        <em>{props.author}</em>
+      </li>
   )
 }
