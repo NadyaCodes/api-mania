@@ -6,6 +6,7 @@ import Fox from './Fox'
 import Satellite from './Satellite';
 import Quote from './Quote'
 import CatFact from './CatFact';
+import User from './User';
 import './App.css';
 
 import { useState } from 'react'
@@ -17,7 +18,8 @@ function App() {
     fox: false,
     satellite: false,
     quote: false,
-    catFact: false
+    catFact: false,
+    user: false
   })
   return (
     <div className="App">
@@ -33,6 +35,7 @@ function App() {
         {state.satellite && <Satellite />}
         {state.animals && <Animals />}
         {state.quote && <Quote />}
+        {state.user && <User />}
       </main>
     </div>
   );
