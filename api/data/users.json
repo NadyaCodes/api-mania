@@ -8,5 +8,20 @@
     "id": 2,
     "name": "Bertram Gilfoyle",
     "email": "gilfoyle@piedpiper.com"
+  },
+  {
+    "id": 3,
+    "name": "Missy Miss Pie",
+    "email": "miss@piedpiper.com"
+  },
+  {
+    "id": 4,
+    "name": "Dracula",
+    "email": "dracs@piedpiper.com"
+  },
+  {
+    "id": 5,
+    "name": "Sven",
+    "email": "sdot@piedpiper.com"
   }
 ]
