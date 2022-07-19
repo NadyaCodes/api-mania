@@ -14,6 +14,7 @@ export default function Navigation(props) {
       <button onClick={() => toggleElement("catFact")} className={state.catFact ? 'selected' : null}>Cat Fact</button>
       <button onClick={() => toggleElement("xkcd")} className={state.xkcd ? 'selected' : null}>XKCD</button>
       <button onClick={() => toggleElement("fox")} className={state.fox ? 'selected' : null}>Fox</button>
+      <button onClick={() => toggleElement("dog")} className={state.dog ? 'selected' : null}>Dog</button>
       <button onClick={() => toggleElement("satellite")} className={state.satellite ? 'selected' : null}>Satellite Pic</button>
       <button onClick={() => toggleElement("animals")} className={state.animals ? 'selected' : null}>Animals</button>
       <button onClick={() => toggleElement("quote")} className={state.quote ? 'selected' : null}>Quotes</button>
