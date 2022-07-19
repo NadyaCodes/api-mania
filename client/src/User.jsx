@@ -14,9 +14,16 @@ export default function User() {
     }
     fetchUsers()
   }, [])
+
+  const displayUsers = users.map((user, index) => {
+    return(
+      <UserItem />
+    )
+  })
   return(
     <article>
       <h2>Random Users</h2>
+      <ul>{displayUsers}</ul>
     </article>
   )
 }
