@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useEffect, useState } from "react";
 
 export default function User() {
-  const [ users, setUsers ] = useState({})
+  const [ users, setUsers ] = useState([])
   
   useEffect(() => {
     const fetchUsers = async () => {
@@ -15,9 +15,9 @@ export default function User() {
     fetchUsers()
   }, [])
 
-  const displayUsers = users.map((user, index) => {
+  const displayUsers = users.map((user) => {
     return(
-      <UserItem />
+      <UserItem key={user.id} name={user.name} email={user.email}/>
     )
   })
   return(

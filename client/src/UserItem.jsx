@@ -1,5 +1,10 @@
-export default function UserItem() {
+export default function UserItem(props) {
   return(
-    <li>User</li>
+    <li>
+      <em>Name: </em>{props.name}
+      <br />
+      <em>Email: </em>{props.email}
+      <hr />
+    </li>
   )
 }
