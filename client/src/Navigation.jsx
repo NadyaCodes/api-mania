@@ -8,9 +8,14 @@ export default function Navigation(props) {
     state[element] ? setState((prev) => ({...prev, [element]: false})) : setState((prev) => ({...prev, [element]: true}))
   }
 
+  const toggleObject = (element, subElement) => {
+    state[element][subElement] ? setState((prev) => ({...prev, [element]: {...prev[element], [subElement]: false}})) : setState((prev) => ({...prev, [element]: {...prev[element], [subElement]: true}}))
+  }
+
   return(
     <nav>
       {/* <button>Products</button> */}
+      <button onClick={() => toggleObject("wiki", "display")} className={state.wiki.display ? 'selected' : null}>Wikipedia</button>
       <button onClick={() => toggleElement("catFact")} className={state.catFact ? 'selected' : null}>Cat Fact</button>
       <button onClick={() => toggleElement("xkcd")} className={state.xkcd ? 'selected' : null}>XKCD</button>
       <button onClick={() => toggleElement("fox")} className={state.fox ? 'selected' : null}>Fox</button>

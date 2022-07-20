@@ -8,6 +8,8 @@ import Quote from './Quote'
 import CatFact from './CatFact';
 import User from './User';
 import Dog from './Dog'
+import WikipediaDisplay from './WikipediaDisplay'
+import WikipediaInput from './WikipediaInput';
 import './App.css';
 
 import { useState } from 'react'
@@ -21,7 +23,8 @@ function App() {
     quote: false,
     catFact: false,
     user: false,
-    dog: false
+    dog: false,
+    wiki: {display: false, content: {}}
   })
   return (
     <div className="App">
@@ -31,6 +34,7 @@ function App() {
       </header>
         <Navigation state={state} setState={setState}/>
       <main>
+        {state.wiki.display && <WikipediaInput state={state} setState={setState}/>}
         {state.catFact && <CatFact />}
         {state.xkcd && <XKCD />}
         {state.fox && <Fox />}
