@@ -24,10 +24,16 @@ export default function WikipediaInput() {
     <section>
       {page ? 
         <WikipediaDisplay day={day} month={month}/> 
-        : <div>
-            Day: <input type='text' id='day' name='day' onChange={handleDate} value={day}></input>
-            Month(numeric): <input type='text' id='month' name='month' onChange={handleMonth} value={month}></input>
+        : <div><h2>Want to know what makes a certain date special?</h2><h3>Look it up on Wikipedia!!</h3>
+        <div className='wikipedia-form'>
+            <div className='day'>
+              Day: <input type='text' id='day' name='day' onChange={handleDate} value={day}></input>
+            </div>
+            <div className='month'>
+              Month (numeric): <input type='text' id='month' name='month' onChange={handleMonth} value={month}></input>
+            </div>
             <button type='submit' onClick={() => showData()}>Search</button>
+          </div>
           </div>}
     </section>
   )

@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
   margin-top: 5rem;
 }
@@ -111,3 +111,28 @@ article {
 .animals-container {
   max-width: 40rem;
 }
+
+/* #root > div > main > section {
+  width: 100%;
+  align-items: right;
+} */
+.wikipedia-form {
+  /* margin: .5rem; */
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  width: 40rem;
+  justify-content: space-around;
+  margin: 1rem;
+  /* width: 100%;
+  justify-content: left; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* flex-direction: column; */
+}
+
+/* .wikipedia-form > input {
+  margin: .3rem;
+  
+} */
