@@ -19,4 +19,6 @@ Fork/clone project and `npm install` in both client and api directories.
 
 ## Images
 
-
+![api-mania Screenshot 1](https://github.com/NadyaCodes/api-mania/blob/c28bf88960dd296a7669f60eb1c6a650800dc945/docs/api-mania%20screenshot%201.png?raw=true)
+![api-mania Screenshot 2](https://github.com/NadyaCodes/api-mania/blob/c28bf88960dd296a7669f60eb1c6a650800dc945/docs/api-mania%20screenshot%202.png?raw=true)
+![api-mania Screenshot 3](https://github.com/NadyaCodes/api-mania/blob/c28bf88960dd296a7669f60eb1c6a650800dc945/docs/api-mania%20screenshot%203.png?raw=true)
