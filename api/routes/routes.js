@@ -2,21 +2,21 @@ import { request, response } from "express"
 import fs from 'fs'
 import axios from "axios"
 
-const userData = fs.readFileSync("data/users.json", 'utf-8')
+const userData = fs.readFileSync("api/data/users.json", 'utf-8')
 const users = JSON.parse(userData)
 
-const quoteData = fs.readFileSync("data/quotes.json", 'utf-8')
+const quoteData = fs.readFileSync("api/data/quotes.json", 'utf-8')
 const quotes = JSON.parse(quoteData)
 
 let products = ''
 
-await fs.readFile("data/products.json", 'utf-8', function(err, data) {
+await fs.readFile("api/data/products.json", 'utf-8', function(err, data) {
   if (err) throw err;
   products = JSON.parse(data)
 })
 
 let animals = ''
-await fs.readFile("data/animals.json", "utf-8", function(err, data) {
+await fs.readFile("api/data/animals.json", "utf-8", function(err, data) {
   if (err) throw err;
   animals = JSON.parse(data)
 })
