@@ -36,10 +36,13 @@ const randomFox = randomFoxResponse.data;
 
 const router = (app) => {
 
+
   app.get("/", (request, response) => {
     response.send({
       message: "Node.js and Express REST API"
     });
+
+
   });
 
   app.get("/users", (request, response) => {
@@ -58,9 +61,6 @@ const router = (app) => {
     response.send(animals)
   })
 
-  // app.get("/cat-facts", (request, response) => {
-  //   response.send(catFacts)
-  // })
 
   app.get("/satellite-pic", (request, response) => {
     response.send(satellitePic)
