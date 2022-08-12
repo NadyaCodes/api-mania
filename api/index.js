@@ -2,8 +2,10 @@ import bodyParser from "body-parser";
 import express from "express";
 import routes from "./routes/routes.js"
 // require('dotenv').config();
+const cors = require('cors')
 const port = process.env.PORT;
 const app = express();
+app.use(cors())
 
 app.use(bodyParser.json());
 app.use(
@@ -11,6 +13,8 @@ app.use(
     extended: true,
   })
 );
+
+
 
 // app.get("/", (request, response) => {
 //   console.log(`URL: ${request.url}`);
