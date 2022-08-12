@@ -2,7 +2,7 @@ import bodyParser from "body-parser";
 import express from "express";
 import routes from "./routes/routes.js"
 // require('dotenv').config();
-const cors = require('cors')
+import cors from 'cors'
 const port = process.env.PORT;
 const app = express();
 app.use(cors())
